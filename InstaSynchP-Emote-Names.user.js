@@ -3,7 +3,7 @@
 // @namespace   InstaSynchP
 // @description Show emote names when hovering over the image
 
-// @version     1
+// @version     1.0.1
 // @author      Zod-
 // @source      https://github.com/Zod-/InstaSynchP-Emote-Names
 // @license     GPL-3.0
@@ -31,6 +31,7 @@ EmoteNames.prototype.executeOnce = function () {
                 if (window.$codes.hasOwnProperty(emote) &&
                     window.$codes[emote].contains($(this).attr('src'))) {
                     $(this).attr('title', emote);
+                    break;
                 }
             }
         });
@@ -38,4 +39,4 @@ EmoteNames.prototype.executeOnce = function () {
 };
 
 window.plugins = window.plugins || {};
-window.plugins.emoteNames = new EmoteNames("1");
+window.plugins.emoteNames = new EmoteNames("1.0.1");
