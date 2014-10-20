@@ -3,7 +3,7 @@
 // @namespace   InstaSynchP
 // @description Show emote names when hovering over the image
 
-// @version     1.0.1
+// @version     1.0.2
 // @author      Zod-
 // @source      https://github.com/Zod-/InstaSynchP-Emote-Names
 // @license     GPL-3.0
@@ -23,7 +23,6 @@ function EmoteNames(version) {
 }
 
 EmoteNames.prototype.executeOnce = function () {
-    console.log('hey');
     events.on('AddMessage', function (ignore, message) {
         //check all <img> in case there can be more in the future
         $('#chat-messages > :last-child span:last-child img').each(function () {
@@ -39,4 +38,4 @@ EmoteNames.prototype.executeOnce = function () {
 };
 
 window.plugins = window.plugins || {};
-window.plugins.emoteNames = new EmoteNames("1.0.1");
+window.plugins.emoteNames = new EmoteNames("1.0.2");
